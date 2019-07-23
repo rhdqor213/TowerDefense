@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
+  - Background
+  - Map
   - Enemy
-  - 
-  - 
   - 
   - 
   - 
@@ -40,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 232694343
+    locked: 0
+  - name: Map
+    uniqueID: 1053667305
+    locked: 0
+  - name: Enemy
+    uniqueID: 4217933353
     locked: 0
