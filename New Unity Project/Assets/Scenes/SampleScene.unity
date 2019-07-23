@@ -372,8 +372,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28304010}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.15, z: -10}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 14319182}
@@ -4104,7 +4104,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1306364542}
-  - component: {fileID: 1306364543}
   - component: {fileID: 1306364541}
   m_Layer: 0
   m_Name: EnemyManager
@@ -4125,8 +4124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fd286538bec9504cb5b634affbc5615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mob: {fileID: 436649757812605681, guid: f06d9aa5fb759f24f935dc0f994397a5, type: 3}
-  regenTime: 0.5
+  mob: {fileID: 7959041342009560515, guid: e17f5a56cdff8944683afc90868f5d7b, type: 3}
+  regenTime: 1
   timer: 0
 --- !u!4 &1306364542
 Transform:
@@ -4142,18 +4141,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1306364543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306364540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0cc9a8fd92a9c145b139b6580bccc67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1322674720
 GameObject:
   m_ObjectHideFlags: 0

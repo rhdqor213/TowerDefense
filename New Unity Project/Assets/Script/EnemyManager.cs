@@ -2,22 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyManager : MonoBehaviour
+public class EnemyManager : PathManager
 {
     public GameObject mob = null;
     public float regenTime = 0;
     public float timer = 0;
-    Vector3 startpos = new Vector3(
-                (PathManager.movePath[0].x - 5) * 1.28f,
-                (PathManager.movePath[0].y - 4) * 1.28f);
+    Vector3 startpos = Vector3.zero;
     private int count = 0;
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+        startpos = new Vector3(
+                (movePath[0].x - 5) * 1.28f,
+                (movePath[0].y - 4) * 1.28f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;

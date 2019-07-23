@@ -15,8 +15,8 @@ public class PathManager : MonoBehaviour
         }
     }
     public static List<MovePath> movePath = new List<MovePath>();
-    // Start is called before the first frame update
-    void Start()
+
+    void Awake()
     {
         movePath.Add(new MovePath(3, 8));
         movePath.Add(new MovePath(3, 7));
@@ -59,11 +59,5 @@ public class PathManager : MonoBehaviour
         movePath.Add(new MovePath(7, 2));
         movePath.Add(new MovePath(7, 1));
         movePath.Add(new MovePath(7, 0));
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

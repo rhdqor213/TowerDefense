@@ -13,17 +13,15 @@ public class EnemyMove : MonoBehaviour
     private Vector3 nowPos = Vector3.zero;
     private Vector3 newPos = Vector3.zero;
 
-    // Start is called before the first frame update
     void Start()
     {
         movePath = PathManager.movePath;
         maxCount = movePath.Count;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime * 3.0f;
+        timer += Time.deltaTime * speed;
 
         nowPos = new Vector3(movePath[nowCount].x - 5, movePath[nowCount].y - 4, 0);
         newPos = new Vector3(movePath[nowCount + 1].x - 5, movePath[nowCount + 1].y - 4, 0);
