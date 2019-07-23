@@ -10,7 +10,14 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(targetPos * Time.deltaTime * 3.0f);
+        if (target == null)
+            Destroy(gameObject);
+        else
+        {
+            targetPos = (target.transform.position - transform.position).normalized;
+            transform.position += tower.GetComponent<Tower>().speed * targetPos * Time.deltaTime;
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, targetPos).normalized;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -52,3 +52,6 @@ TagManager:
   - name: Unit
     uniqueID: 4217933353
     locked: 0
+  - name: Tower
+    uniqueID: 523529183
+    locked: 0

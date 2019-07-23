@@ -6,6 +6,7 @@ public class Tower : MonoBehaviour
 {
     public GameObject bullet = null;
     public int damage = 0;
+    public float speed = 0;
     public List<GameObject> collEnemys = new List<GameObject>();
     public float fireTime = 0;
     public float rotDeg;
@@ -25,18 +26,18 @@ public class Tower : MonoBehaviour
             transform.localRotation =
                 Quaternion.Lerp(transform.localRotation,
                 Quaternion.Euler(0f,0f,rotDeg-90),
-                /**/5.0f*Time.deltaTime);
+                /**/6.0f*Time.deltaTime);
 
             if (target != null)
             {
                 if (timer > fireTime)
                 {
                     timer = 0.0f;
-                    var aBullet = Instantiate(bullet, transform.position, Quaternion.identity, transform);
-                    aBullet.GetComponent<Bullet>().targetPos = (targetPos - transform.position).normalized;
+                    var aBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+                    aBullet.transform.parent = null;
                     aBullet.GetComponent<Bullet>().target = target;
                     aBullet.GetComponent<Bullet>().tower = gameObject;
-                    aBullet.transform.localScale = new Vector3(0.5f, 0.5f);
+                    aBullet.transform.localScale = new Vector3(1.5f, 1.5f, 0);
                 }
             }
         }
