@@ -60,6 +60,7 @@
      <Compile Include="Assets\Script\PathManager.cs" />
      <Compile Include="Assets\Script\Tower.cs" />
      <Compile Include="Assets\Script\TowerManager.cs" />
+     <Compile Include="Assets\Script\TowerRange.cs" />
      <None Include="Assets\Resources\unusing\boardgamepack\Spritesheets\diceWhite.xml" />
      <None Include="Assets\Resources\unusing\kenney_topdowntanksredux\Spritesheet\onlyObjects_retina.xml" />
      <None Include="Assets\Resources\unusing\boardgamepack\Spritesheets\chips.xml" />

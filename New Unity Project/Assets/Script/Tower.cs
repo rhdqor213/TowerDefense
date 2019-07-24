@@ -5,12 +5,20 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     public GameObject bullet = null;
+    public GameObject Range = null;
+    public GameObject RangeCircle = null;
     public int damage = 0;
     public float speed = 0;
     public List<GameObject> collEnemys = new List<GameObject>();
     public float fireTime = 0;
     public float rotDeg;
     private float timer = 0;
+
+    void Start()
+    {
+        RangeCircle = Instantiate(Range, transform);
+        RangeCircle.GetComponent<TowerRange>().tower = gameObject;
+    }
 
     void Update()
     {
@@ -26,7 +34,7 @@ public class Tower : MonoBehaviour
             transform.localRotation =
                 Quaternion.Lerp(transform.localRotation,
                 Quaternion.Euler(0f,0f,rotDeg-90),
-                /**/6.0f*Time.deltaTime);
+                6.0f*Time.deltaTime);
 
             if (target != null)
             {
@@ -39,24 +47,6 @@ public class Tower : MonoBehaviour
                     aBullet.GetComponent<Bullet>().tower = gameObject;
                     aBullet.transform.localScale = new Vector3(1.5f, 1.5f, 0);
                 }
-            }
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Enemy")
-            collEnemys.Add(collision.gameObject);
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        foreach (GameObject go in collEnemys)
-        {
-            if (go == collision.gameObject)
-            {
-                collEnemys.Remove(go);
-                break;
             }
         }
     }
