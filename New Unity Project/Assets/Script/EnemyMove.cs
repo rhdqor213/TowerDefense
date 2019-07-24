@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     public float speed = 0;
+    public int hp = 100;
     private List<PathManager.MovePath> movePath = null;
     private int nowCount = 0;
     private int maxCount = 0;
@@ -37,5 +38,15 @@ public class EnemyMove : MonoBehaviour
             if (nowCount >= maxCount-1)
                 Destroy(gameObject);
         }
+
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void damage(int m)
+    {
+        hp -= m;
     }
 }

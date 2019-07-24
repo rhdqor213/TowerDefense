@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - 
   - Background
   - Map
-  - Enemy
+  - Unit
   - 
   - 
   - 
@@ -47,6 +49,6 @@ TagManager:
   - name: Map
     uniqueID: 1053667305
     locked: 0
-  - name: Enemy
+  - name: Unit
     uniqueID: 4217933353
     locked: 0
