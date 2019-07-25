@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemyManager : PathManager
 {
-    public GameObject mob = null;
+    public GameObject mob1 = null;
+    public GameObject mob2 = null;
     public float regenTime = 0;
     public float timer = 0;
     Vector3 startpos = Vector3.zero;
@@ -24,7 +25,12 @@ public class EnemyManager : PathManager
         {
             if (count < 20)
             {
-                Instantiate(mob, startpos, Quaternion.identity);
+                Instantiate(mob1, startpos, Quaternion.identity);
+                count++;
+            }
+            else if (count < 40)
+            {
+                Instantiate(mob2, startpos, Quaternion.identity);
                 count++;
             }
             timer = 0.0f;

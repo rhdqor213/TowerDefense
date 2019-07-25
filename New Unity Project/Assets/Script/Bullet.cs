@@ -24,10 +24,15 @@ public class Bullet : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            target.GetComponent<EnemyMove>().damage(tower.GetComponent<Tower>().damage);
-            if (target == null)
+            if (target == null){
                 tower.GetComponent<Tower>().collEnemys.Remove(tower.GetComponent<Tower>().collEnemys[0]);
-            Destroy(gameObject);
+                Destroy(gameObject);
+            }
+            else
+            {
+                target.GetComponent<EnemyMove>().damage(tower.GetComponent<Tower>().damage);
+                Destroy(gameObject);
+            }
         }
     }
 }

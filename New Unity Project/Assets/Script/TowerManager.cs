@@ -8,6 +8,7 @@ public class TowerManager : MonoBehaviour
     public bool TdoNot = false;
     public bool RdoNot = false;
 
+    public GameObject square;
     public GameObject alpha150 = null;
     private GameObject createalpha = null;
     public GameObject realTower = null;
@@ -42,5 +43,12 @@ public class TowerManager : MonoBehaviour
         TdoNot = false;
         RdoNot = false;
         Destroy(createalpha);
+    }
+
+    private void OnMouseOver()
+    {
+        if (square.GetComponent<MouseCheck>().e == false)
+            transform.parent.position += new Vector3(0f, 1f, 0f);
+        square.GetComponent<MouseCheck>().e = true;
     }
 }
