@@ -2,38 +2,59 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyManager : PathManager
+public class EnemyManager : MonoBehaviour
 {
-    public GameObject mob1 = null;
-    public GameObject mob2 = null;
-    public float regenTime = 0;
-    public float timer = 0;
-    Vector3 startpos = Vector3.zero;
-    private int count = 0;
+    public GameObject manager = null;
+    public GameObject HPbar = null;
+    public float speed = 0;
+    public float hp = 100;
+    public float maxhp = 100;
+    public int money = 0;
+
+    private List<PathManager.MovePath> movePath = null;
+    private int nowCount = 0;
+    private int maxCount = 0;
+    private float timer = 0;
+
+    private Vector3 nowPos = Vector3.zero;
+    private Vector3 newPos = Vector3.zero;
 
     void Start()
     {
-        startpos = new Vector3(
-                (movePath[0].x - 5) * 1.28f,
-                (movePath[0].y - 4) * 1.28f);
+        manager = GameObject.FindGameObjectWithTag("Manager");
+        movePath = PathManager.movePath;
+        maxCount = movePath.Count;
     }
 
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer > regenTime)
+        HPbar.transform.localScale = new Vector3(hp / maxhp, HPbar.transform.localScale.y);
+        timer += Time.deltaTime * speed;
+
+        nowPos = new Vector3(movePath[nowCount].x - 5, movePath[nowCount].y - 4, 0);
+        newPos = new Vector3(movePath[nowCount + 1].x - 5, movePath[nowCount + 1].y - 4, 0);
+
+        float x = Mathf.Lerp(nowPos.x * 1.28f, newPos.x * 1.28f, timer);
+        float y = Mathf.Lerp(nowPos.y * 1.28f, newPos.y * 1.28f, timer);
+        transform.position = new Vector3(x, y, 0);
+
+        if (timer >= 1.0f)
         {
-            if (count < 20)
-            {
-                Instantiate(mob1, startpos, Quaternion.identity);
-                count++;
-            }
-            else if (count < 40)
-            {
-                Instantiate(mob2, startpos, Quaternion.identity);
-                count++;
-            }
-            timer = 0.0f;
+            timer = 0;
+            nowCount++;
+            if (nowCount >= maxCount-1)
+                Destroy(gameObject);
         }
+
+        if (hp <= 0)
+        {
+            manager.GetComponent<GameManager>().money += this.money;
+            Destroy(gameObject);
+        }
+    }
+
+    public void damage(int m)
+    {
+        hp -= m;
     }
 }

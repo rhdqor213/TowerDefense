@@ -7,11 +7,18 @@ public class TowerManager : MonoBehaviour
     private bool isClicked = false;
     public bool TdoNot = false;
     public bool RdoNot = false;
+    public int money = 0;
 
+    public GameObject manager = null;
     public GameObject square;
     public GameObject alpha150 = null;
     private GameObject createalpha = null;
     public GameObject realTower = null;
+
+    void Start()
+    {
+        manager = GameObject.FindGameObjectWithTag("Manager");
+    }
 
     private void OnMouseDown()
     {
@@ -36,8 +43,9 @@ public class TowerManager : MonoBehaviour
     private void OnMouseUp()
     {
         isClicked = false;
-        if (TdoNot == false&&RdoNot==false)
+        if (TdoNot == false && RdoNot == false && manager.GetComponent<GameManager>().money >= this.money)
         {
+            manager.GetComponent<GameManager>().money -= this.money;
             Instantiate(realTower, createalpha.transform.position, Quaternion.identity);
         }
         TdoNot = false;

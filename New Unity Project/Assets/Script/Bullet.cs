@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour
             }
             else
             {
-                target.GetComponent<EnemyMove>().damage(tower.GetComponent<Tower>().damage);
+                target.GetComponent<EnemyManager>().damage(tower.GetComponent<Tower>().damage);
                 Destroy(gameObject);
             }
         }

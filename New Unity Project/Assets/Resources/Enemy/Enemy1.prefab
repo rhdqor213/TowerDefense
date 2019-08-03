@@ -95,10 +95,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ebff2ae7f660f4d96b9dcef54db586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
   HPbar: {fileID: 9205413264332793500}
   speed: 1.5
   hp: 100
   maxhp: 100
+  money: 10
 --- !u!58 &6197277533025433716
 CircleCollider2D:
   m_ObjectHideFlags: 0

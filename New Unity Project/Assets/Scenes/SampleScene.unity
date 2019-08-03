@@ -3139,8 +3139,8 @@ GameObject:
   - component: {fileID: 1306364542}
   - component: {fileID: 1306364541}
   m_Layer: 0
-  m_Name: EnemyManager
-  m_TagString: Untagged
+  m_Name: GameManager
+  m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3161,6 +3161,7 @@ MonoBehaviour:
   mob2: {fileID: 4151353286219782872, guid: 435bf83235d7cbe4b818b42790eccf73, type: 3}
   regenTime: 1
   timer: 0
+  money: 100
 --- !u!4 &1306364542
 Transform:
   m_ObjectHideFlags: 0
