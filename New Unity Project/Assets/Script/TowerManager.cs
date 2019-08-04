@@ -56,7 +56,7 @@ public class TowerManager : MonoBehaviour
     private void OnMouseOver()
     {
         if (square.GetComponent<MouseCheck>().e == false)
-            transform.parent.position += new Vector3(0f, 1f, 0f);
+            transform.parent.position += new Vector3(0f, 1.5f, 0f);
         square.GetComponent<MouseCheck>().e = true;
     }
 }

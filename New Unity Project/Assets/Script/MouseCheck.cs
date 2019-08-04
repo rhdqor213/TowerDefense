@@ -8,14 +8,14 @@ public class MouseCheck : MonoBehaviour
     void OnMouseOver()
     {
         if (e == false)
-            transform.position += new Vector3(0f, 1f, 0f);
+            transform.position += new Vector3(0f, 1.5f, 0f);
         e = true;
     }
 
     void OnMouseExit()
     {
         if (e == true)
-            transform.position -= new Vector3(0f, 1f, 0f);
+            transform.position -= new Vector3(0f, 1.5f, 0f);
         e = false;
     }
 }
