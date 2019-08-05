@@ -31,7 +31,7 @@ PrefabInstance:
     - target: {fileID: 7712441198438799021, guid: ec680200c54611848b3ae67763dc68f5,
         type: 3}
       propertyPath: m_Name
-      value: Tower2 Maker
+      value: Tower2_Maker
       objectReference: {fileID: 0}
     - target: {fileID: 7712441198438799021, guid: ec680200c54611848b3ae67763dc68f5,
         type: 3}
@@ -106,6 +106,8 @@ PrefabInstance:
     - {fileID: 3084647697000577833, guid: ec680200c54611848b3ae67763dc68f5, type: 3}
     - {fileID: 725491875107938936, guid: ec680200c54611848b3ae67763dc68f5, type: 3}
     - {fileID: 8237141204838149550, guid: ec680200c54611848b3ae67763dc68f5, type: 3}
+    - {fileID: 7477990202550815980, guid: ec680200c54611848b3ae67763dc68f5, type: 3}
+    - {fileID: 5971780454033220656, guid: ec680200c54611848b3ae67763dc68f5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ec680200c54611848b3ae67763dc68f5, type: 3}
 --- !u!1 &3927138675222263046 stripped
 GameObject:

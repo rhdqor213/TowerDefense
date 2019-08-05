@@ -414,8 +414,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 567531321}
   - {fileID: 996340410}
+  - {fileID: 567531321}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2053,7 +2053,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 26364964}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3081,6 +3081,16 @@ PrefabInstance:
       propertyPath: square
       value: 
       objectReference: {fileID: 1107825373}
+    - target: {fileID: 2550298436084737256, guid: bb4c533716d5c8d4ab04591e4e430ff6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298565008676658191, guid: bb4c533716d5c8d4ab04591e4e430ff6,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb4c533716d5c8d4ab04591e4e430ff6, type: 3}
 --- !u!1 &996340409
@@ -3113,7 +3123,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 26364964}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3134,7 +3144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3509,6 +3519,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower3_Maker
       objectReference: {fileID: 0}
+    - target: {fileID: 6179354999229513539, guid: 762ccbf1164439642a98533358477fd9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5088904471523347970, guid: 762ccbf1164439642a98533358477fd9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3584,6 +3599,26 @@ PrefabInstance:
       propertyPath: square
       value: 
       objectReference: {fileID: 1107825373}
+    - target: {fileID: 5195682076973780539, guid: 762ccbf1164439642a98533358477fd9,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 5195682076973780539, guid: 762ccbf1164439642a98533358477fd9,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 5195682076973780539, guid: 762ccbf1164439642a98533358477fd9,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064484216793218214, guid: 762ccbf1164439642a98533358477fd9,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 762ccbf1164439642a98533358477fd9, type: 3}
 --- !u!1 &1208780915
@@ -3832,6 +3867,7 @@ MonoBehaviour:
   regenTime: 1
   timer: 0
   money: 100
+  cmoney: 0
   moneyText: {fileID: 567531322}
 --- !u!4 &1306364542
 Transform:

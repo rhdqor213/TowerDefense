@@ -31,7 +31,7 @@ PrefabInstance:
     - target: {fileID: 4264830376155591566, guid: e99a743d42365a24195e1477fb91658e,
         type: 3}
       propertyPath: m_Name
-      value: Tower3
+      value: Tower3_Maker
       objectReference: {fileID: 0}
     - target: {fileID: 2914296971849925327, guid: e99a743d42365a24195e1477fb91658e,
         type: 3}
@@ -103,9 +103,16 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 73200719827791979, guid: e99a743d42365a24195e1477fb91658e,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 378173000116558588, guid: e99a743d42365a24195e1477fb91658e, type: 3}
     - {fileID: 7875609016010418032, guid: e99a743d42365a24195e1477fb91658e, type: 3}
+    - {fileID: 8977526350731440835, guid: e99a743d42365a24195e1477fb91658e, type: 3}
+    - {fileID: 2258726835427577605, guid: e99a743d42365a24195e1477fb91658e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e99a743d42365a24195e1477fb91658e, type: 3}
 --- !u!1 &6179354999229513539 stripped
 GameObject:

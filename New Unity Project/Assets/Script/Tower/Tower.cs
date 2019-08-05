@@ -6,18 +6,17 @@ public class Tower : MonoBehaviour
 {
     public GameObject bullet = null;
     public GameObject Range = null;
-    public GameObject RangeCircle = null;
     public int damage = 0;
     public float speed = 0;
     public List<GameObject> collEnemys = new List<GameObject>();
     public float fireTime = 0;
     public float rotDeg;
+    private bool isClicked = false;
     private float timer = 0;
 
     void Start()
     {
-        RangeCircle = Instantiate(Range, transform);
-        RangeCircle.GetComponent<TowerRange>().tower = gameObject;
+        Range.SetActive(false);
     }
 
     void Update()
@@ -48,6 +47,20 @@ public class Tower : MonoBehaviour
                     aBullet.transform.localScale = new Vector3(1.5f, 1.5f, 0);
                 }
             }
+        }
+    }
+
+    public void select()
+    {
+        if (isClicked == true)
+        {
+            isClicked = false;
+            Range.SetActive(false);
+        }
+        else if (isClicked == false)
+        {
+            isClicked = true;
+            Range.SetActive(true);
         }
     }
 }

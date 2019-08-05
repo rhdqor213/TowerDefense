@@ -31,7 +31,7 @@ PrefabInstance:
     - target: {fileID: 4951730133763426009, guid: 2957c69b9e134e644b4811139e6ccd1a,
         type: 3}
       propertyPath: m_Name
-      value: Tower1 Maker
+      value: Tower1_Maker
       objectReference: {fileID: 0}
     - target: {fileID: 4951730133763426009, guid: 2957c69b9e134e644b4811139e6ccd1a,
         type: 3}
@@ -109,6 +109,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6861675153454032734, guid: 562883d294814f44a991fc39bd00155c,
         type: 3}
+    - target: {fileID: 9056644268415801287, guid: 2957c69b9e134e644b4811139e6ccd1a,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2332668148183781367, guid: 2957c69b9e134e644b4811139e6ccd1a, type: 3}
     - {fileID: 7491598933882121689, guid: 2957c69b9e134e644b4811139e6ccd1a, type: 3}
