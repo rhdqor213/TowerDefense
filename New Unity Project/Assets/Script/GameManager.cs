@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : PathManager
 {
@@ -9,6 +10,7 @@ public class GameManager : PathManager
     public float regenTime = 0;
     public float timer = 0;
     public int money = 100;
+    public Text moneyText;
 
     Vector3 startpos = Vector3.zero;
     private int count = 0;
@@ -37,5 +39,6 @@ public class GameManager : PathManager
             }
             timer = 0.0f;
         }
+        moneyText.text = money.ToString();
     }
 }

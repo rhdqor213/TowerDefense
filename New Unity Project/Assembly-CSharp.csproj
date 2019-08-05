@@ -53,32 +53,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\Alpha.cs" />
-     <Compile Include="Assets\Script\Bullet.cs" />
      <Compile Include="Assets\Script\EnemyManager.cs" />
      <Compile Include="Assets\Script\GameManager.cs" />
-     <Compile Include="Assets\Script\MouseCheck.cs" />
      <Compile Include="Assets\Script\PathManager.cs" />
-     <Compile Include="Assets\Script\Tower.cs" />
-     <Compile Include="Assets\Script\TowerManager.cs" />
-     <Compile Include="Assets\Script\TowerRange.cs" />
-     <None Include="Assets\Resources\unusing\boardgamepack\Spritesheets\diceWhite.xml" />
+     <Compile Include="Assets\Script\Tower\Alpha.cs" />
+     <Compile Include="Assets\Script\Tower\Bullet.cs" />
+     <Compile Include="Assets\Script\Tower\MouseCheck.cs" />
+     <Compile Include="Assets\Script\Tower\Tower.cs" />
+     <Compile Include="Assets\Script\Tower\TowerManager.cs" />
+     <Compile Include="Assets\Script\Tower\TowerRange.cs" />
      <None Include="Assets\Resources\unusing\kenney_topdowntanksredux\Spritesheet\onlyObjects_retina.xml" />
-     <None Include="Assets\Resources\unusing\boardgamepack\Spritesheets\chips.xml" />
      <None Include="Assets\Resources\unusing\tower-defense-top-down\License.txt" />
-     <None Include="Assets\Resources\unusing\boardgamepack\license.txt" />
      <None Include="Assets\Resources\unusing\kenney_topdowntanksredux\License.txt" />
-     <None Include="Assets\Resources\unusing\boardgamepack\Spritesheets\diceRed.xml" />
      <None Include="Assets\Resources\unusing\kenney_topdowntanksredux\Spritesheet\allSprites_retina.xml" />
      <None Include="Assets\Resources\unusing\kenney_topdowntanksredux\Spritesheet\allSprites_default.xml" />
-     <None Include="Assets\Resources\unusing\boardgamepack\Spritesheets\diceWhite_border.xml" />
      <None Include="Assets\Resources\unusing\kenney_piratepack\Tilesheet\tilesheets.txt" />
-     <None Include="Assets\Resources\unusing\boardgamepack\Spritesheets\playingCards.xml" />
      <None Include="Assets\Resources\unusing\kenney_piratepack\License.txt" />
      <None Include="Assets\Resources\unusing\kenney_topdowntanksredux\Spritesheet\onlyObjects_default.xml" />
      <None Include="Assets\Resources\unusing\kenney_piratepack\Spritesheet\shipsMiscellaneous_sheet.xml" />
-     <None Include="Assets\Resources\unusing\boardgamepack\Spritesheets\diceRed_border.xml" />
-     <None Include="Assets\Resources\unusing\boardgamepack\Spritesheets\playingCardBacks.xml" />
      <None Include="Assets\Resources\unusing\kenney_piratepack\Spritesheet\shipsMiscellaneous_sheet@2.xml" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Administrator/Desktop/project/2학년 겜심 소수전공 개인/New Unity Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
